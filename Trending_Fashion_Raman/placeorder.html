@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>Trending Fashion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="logo"> 
+<img src="images/logo3.jpg">
+</div>	
+<div class="email">
+<h4> Email</h4>
+<code>trending_fashion@hotmail.com</code>
+</div>
+<div class="call">
+<h4>Customer Care </h4>
+<code>Contact +1 45250 088</code>
+</div>
+<div class="call">
+   <h4>To Cancel Order</h4>
+      <code>Dial +441 2522 00</code>
+</div>
+</div>
+<div class="navbar">
+<div class="nav">
+<ul>
+<li class="head"><a href="index.html">Home</a></li>
+<li class="head"><a href="about.html">About us</a></li>
+<li class="head"><a href="products.html">Our Products</a></li>
+<li class="head"><a href="ReachUs.html">Contact US </a></li>
+<li class="head"><a href="#">FAQs </a></li>
+</ul>
+</div>
+</div>
+
+</div>
+<div>
+        <div class="workarea">
+            <h1>Please fill this form to place your order Online </h1>
+            <form id="order_form">
+            <table>
+                <tr><td> <b>Email Address</b></td>
+                <td><input type="text" name = "number1" id = "number1Id" title="Enter a valid email format" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required ></td>
+                <td><div class="error_form" id = "n1error">*</div></td></tr>
+                
+                <tr><td><b>Re-Enter Email Address</b></td>
+                <td><input type="text" name = "number2" id = "number2Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email format" required> </td>
+                <td><div class="error_form" id = "n2error">*</div></td></tr>
+               
+                <tr><td><b>Name</b></td>
+                <td><input type="text" name = "number3" id = "number3Id" pattern="[A-Za-z]+" required> 
+                <td><div class="error_form" id = "n3error">*</div></td><br>
+               
+                <tr><td><b>Contact No.</b></td>
+                <td><input type="number" name = "number4" id = "number4Id" pattern="[0-9]" required></td>
+                <td><div class="error_form" id = "n4error">*</div></td></tr>
+               
+                <tr><td><b>Address Line 1</b></td>
+                <td><input type="text" name = "number5" id = "number5Id" maxlength="25" pattern="[0-9][A-Za-z]" required></td>
+                <td><div class="error_form" id = "n5error">*</div></td><br>
+        
+                <tr><td> <b>Address Line 2</b></td>
+                <td><input type="text" name = "number6" id = "number6Id" maxlength="25" pattern="[0-9][A-Za-z]" required> 
+                <td><div class="error_form" id = "n6error">*</div></td></tr>
+        
+                <tr></tr>
+                <tr><td></td>
+                    <td><input type="Submit" value="Validate" class="sbmt_btn" onclick="validation()">
+                      <input type="reset" class="sbmt_btn" value="Reset"></td></tr>
+                    <tr><td></td><td>  <a href="checkout.html"><input type="Button" value="Proceed" class="sbmt_btn"></td>
+                </table>
+            </form>
+        </body>
+        
+        <script>
+            function validation() {
+                var a = document.getElementById("number1Id").value;
+                var b = document.getElementById("number2Id").value;
+                var c = document.getElementById("number3Id").value;
+                var d = document.getElementById("number4Id").value;
+                var e = document.getElementById("number5Id").value;
+                var f = document.getElementById("number6Id").value;
+                console.log(a);
+                
+                if(a == ""){
+                    document.getElementById("n1error").innerHTML = "This Field is required";
+                }else{
+                    if(b != ""){
+                        if(a != b){
+                            document.getElementById("n2error").innerHTML = "Must equal first Email Entry";
+                        }
+                    }
+                }
+                if(b == ""){
+                    document.getElementById("n2error").innerHTML = "This Field is required";
+                }
+                if(c == ""){
+                    document.getElementById("n3error").innerHTML = "This Field is required";
+                }
+                if(d == ""){
+                    document.getElementById("n4error").innerHTML = "This Field is required";
+                }
+                if(e == ""){
+                    document.getElementById("n5error").innerHTML = "This Field is required";
+                }
+                if(f == ""){
+                    document.getElementById("n6error").innerHTML = "This Field is required";
+                }        
+            }    
+        </script>

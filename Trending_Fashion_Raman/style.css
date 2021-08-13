@@ -1,0 +1,146 @@
+    *{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .container{
+    width:100%;
+    float:left;
+    }
+    .logo{
+    width:20%;
+    float:right;
+    height:100px;
+    margin-right: 10px;
+    padding-left:10px;
+    }
+     .logo img{
+         height:100px;
+         width: 250px;
+     }
+     
+    .email{
+    width:20%;
+    float:left;
+    margin-top: 20px;
+    font-size: small;
+    }
+    .call{
+    width:20%;   
+    float:left;
+    margin-top: 20px;
+    font-size: small;
+    }
+    .order{
+    width:10%;
+    float:left;
+    padding-left:50px;
+    padding-top:5px;
+    margin-top: 1 px;
+    }
+    .navbar{
+    width:1340;
+    float:left;
+    background-color:purple;
+    color:white;
+    height:60px;
+    padding-top:20px;
+    }
+    .nav{
+    width:60%;
+    float:left;
+    }
+    .head{
+    display:inline;
+    padding:20px;
+    }
+    .seven{
+    width:40%;
+    float:left;
+    padding-left:250px;
+    height: 20%;
+
+    }
+    a{
+    text-decoration:none;
+    color:white;
+    font-size: medium;
+    padding: 5px 5px 5px 5px;
+    }
+    a:hover{
+    color:purple;
+    text-decoration:none;
+    font-family:arial;
+    background-color:white;
+    }
+    .footer{
+    width:100%;
+    float:right;
+    align-content: right;
+    background-color: purple;
+    height: 150px;
+    padding: 20px 20px 20px 20px;
+    color:white;
+    }
+    
+    .about{
+        width:80%;
+        float:left;
+        color: purple;
+        height: 500px;
+        margin-left: 10%;
+        margin-top: 5%;
+        align-content: center;
+    }
+    
+.workarea {
+    float:left;
+    margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	height: 500px;
+	padding-left: 20px;
+	padding-top: 20px;
+    border-style: double;
+    border-color: purple;
+}
+
+.workarea h1 {
+	margin-left: 0px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-family: "Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
+	letter-spacing: 1px;
+	color:purple;
+}
+
+.workarea table tr td {
+	font-family: "Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
+	font-size: 20px;
+	color: purple;
+    height: 20px;
+	padding: 5px;
+}
+.sbmt_btn {
+	margin-top: 10px;
+	background-color:purple;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:white;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	outline: 0px;
+}
+.error_form {
+	font-size: 12px;
+	font-family: Arial;
+	color: #FF0052;
+}

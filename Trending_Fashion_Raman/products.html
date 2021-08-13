@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Trending Fashion</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="products.css">
+</head>
+<body>
+<div class="container">
+<div class="logo"> 
+<img src="images/logo3.jpg" id="logo">
+</div>	
+<div class="email">
+<h4> Email</h4>
+<code>trending_fashion@hotmail.com</code>
+</div>
+<div class="call">
+<h4>Customer Care </h4>
+<code>Contact +1 45250 088</code>
+</div>
+<div class="call">
+   <h4>To Cancel Order</h4>
+      <code>Dial +441 2522 00</code>
+</div>
+</div>
+<div class="navbar">
+<div class="nav">
+<ul>
+<li class="head"><a href="index.html">Home</a></li>
+<li class="head"><a href="about.html">About us</a></li>
+<li class="head"><a href="products.html">Our Products</a></li>
+<li class="head"><a href="ReachUs.html">Contact US </a></li>
+<li class="head"><a href="#">FAQs </a></li>
+</ul>
+</div>
+</div>
+
+</div>
+<br>
+
+  <h2 class="menu">Women Trending Fashion</h2>
+<br>
+  <h3>Click an item to add it to your order</h3>
+
+  <div class="options">
+    <img src="images/7.jpg" alt="" id="b7">
+    <img src="images/2.jpg" alt="" id="c1">
+    <img src="images/3.jpg" alt="" id="c2">	  <br>
+    <img src="images/4.jpg" alt="" id="c3">
+    <img src="images/5.jpg" alt="" id="c4">
+    <img src="images/6.jpg" alt="" id="c5">
+  </div>
+
+  <div class="orders">
+    <h2>Your Order</h2>
+    <textarea name="orders" cols="30" rows="10" class="orders"></textarea>
+    <p class="total">Total: $<span class="price">0</span></p>
+  </div>
+
+  <div class="buttons">
+	  <a href="placeorder.html"><button class="place">Place Order</button></a>
+    <button class="clear">Clear Order</button>
+  </div>
+
+
+  <script>
+    const images = document.querySelectorAll('img');
+
+    // name and price data
+    const data = {
+      'b7': {
+        'name': 'Women Fashion',
+        'price': 150
+      },
+      'c1': {
+        'name': 'Women Fashion',
+        'price': 120
+      },
+      'c2': {
+        'name': 'Women Fashion',
+        'price': 190
+      },
+      'c3': {
+        'name': 'Women Fashion',
+        'price': 130
+      },
+      'c4': {
+        'name': 'Women Fashion',
+        'price': 150
+      },
+      'c5': {
+        'name': 'Women Fashion',
+        'price': 200
+      }
+    }
+
+ // listening for mouse over on images
+    images.forEach((img) => {
+      img.addEventListener('mouseover', (e) => {
+        // updating images according to the id
+        e.target.src = pricedImages[e.target.id]
+      })
+
+      // also adding mouse out event to remove those price and names
+      img.addEventListener('mouseout', (e) => {
+        e.target.src = rawImages[e.target.id]
+      })
+
+      // listening for click
+      img.addEventListener('click', (e) => {
+        const textarea = document.querySelector('textarea'); // getting the text area
+        const price = document.querySelector('span.price');
+
+        textarea.textContent += `$${data[e.target.id]['price']} - ${data[e.target.id]['name']}\n` // updating the textarea
+
+        price.textContent = parseFloat(price.textContent) + parseFloat(data[e.target.id]['price']); // updating the price
+      })
+    })
+
+    // removing orders and price on click on clear button
+    document.querySelector('.clear').addEventListener('click', () => {
+      document.querySelector('textarea').textContent = ""; // clearing the orders
+      document.querySelector('span.price').textContent = 0; // clearing the total
+    })
+  </script>
+</body>
+</html>
